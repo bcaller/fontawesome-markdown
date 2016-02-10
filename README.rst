@@ -22,4 +22,13 @@ magic unfold:
     >>> markdown.convert('i ♥ :fa-coffee:')
     <p>i ♥ <i class="fa fa-coffee"></i></p>
 
+Or alternatively, without requiring the import:
+
+.. code-block:: python
+
+    >>> from markdown import Markdown
+
+    >>> markdown = Markdown(extensions=['fontawesome_markdown']
+    >>> markdown.convert('i ♥ :fa-coffee:')
+
 Don't forget to make the Font Awesome assets available to your DOM, and you're done!
